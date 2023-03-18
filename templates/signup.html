@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+
+{% block head %}<link rel="stylesheet" href="{{ url_for('static',filename='signup.css') }}">{% endblock %}
+
+{% block body %}
+<div class="form"">
+
+    <form action="/signup" method="POST">
+        <div class="container">
+        <h1 style="text-align: center;">Register</h1>
+        <p style="text-align: center;">Please fill in this form to create an account.</p>
+        {% for mesg in get_flashed_messages() %}
+        <h1 style="text-align: center;color:red;">{{ mesg }}</h1>
+        {% endfor %}
+        <hr>
+
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+    
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        
+        <button type="submit" class="registerbtn" value="Submit">Register</button>
+        </div>
+    
+        <div class="container signin">
+        <p>Already have an account? <a href="/login">Login</a>.</p>
+        </div>
+    </form>
+
+</div>
+{%endblock%}

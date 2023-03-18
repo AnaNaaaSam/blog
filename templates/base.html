@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+  <title>{% block title %}{% endblock %}</title>
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+
+  <div class="topnav">
+    <a href="/">Home</a>
+    <a href="/makepost">Create New Post</a>
+    {% if current_user.is_authenticated %}
+    <a href="/logout" style="float: right; font:bold; text-align:right;">Logout</a>
+    {% else %}
+    <a href="/login" style="float: right; font:bold; text-align:right;">Login</a>
+    <a href="/signup" style="float: right; font:bold; text-align:right;">Register</a>
+    {% endif %}
+
+    <a href="/dashboard" style="float: right; font:bold; text-align:right;">Dashboard</a>
+
+  </div>
+  
+  {% block body %}
+  {% endblock %}
+
+</body>
+</html>

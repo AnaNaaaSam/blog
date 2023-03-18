@@ -1,0 +1,112 @@
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+    }
+    
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {   
+        margin:0 auto;
+    width: 75%;
+    }
+    
+    
+    /* Fake image */
+    .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    }
+    
+    /* Add a card effect for articles */
+    .card {
+        background-color: #a9e3fd;
+        padding: 20px;
+        margin-top: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .card:hover {
+        box-shadow: 0 3px 10px rgb(231, 223, 215);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    
+    /* Footer */
+    .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    }
+    
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+    }
+    .admin{
+        background-color: #20272b;
+        color: white;
+        font-size: 15px;
+        border: none;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+        padding:1em;
+        
+        text-align: center;
+        display:inline-block;
+        text-decoration: none !important;
+        margin:0 auto ;
+        transition: all 0.5s ease-in-out;
+    }
+    .admin:hover {
+        background-color: #577685;
+        color: black;
+    
+        box-shadow: 0px 2px 10px #463d35;
+        transition: box-shadow 0.5s ease-in-out;
+        transition: background-color 0.6s ease-in-out;
+        transition: font-size 0.5s ease-in-out;
+      }
+      .CP{
+        background-color: #C9EEFF;
+        color: black;
+        font-size: 20px;
+        border: none;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+        padding:1em;
+        text-align: center;
+        display:inline-block;
+        text-decoration: none !important;
+        margin:0 auto;
+        transition: all 0.5s ease-in-out;
+    
+    }
+    .ContentMake{
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .CP:hover {
+        background-color: #a9e3fd;
+        box-shadow: 0px 2px 10px #463d35;
+        transition: box-shadow 0.5s ease-in-out;
+        transition: background-color 0.6s ease-in-out;
+        transition: font-size 0.5s ease-in-out;
+      }
+body{
+    background-color: red;
+}

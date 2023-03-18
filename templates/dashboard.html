@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block title %}Dashboard{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static',filename='dashboard.css') }}">{% endblock %}
+
+{% block body %}
+
+    <div class="ContentMake">
+        <a href="/logout" class="CP">Logout</a>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+        {% for tasks in tasks %}
+          <div class="card">
+            <h2>{{tasks.title}}</h2>
+            <h5>{{Users.query.filter_by(id = tasks.user_id)[0].username}}, {{tasks.date_created}}</h5>
+
+            <p>{{tasks.text}}</p>
+              <a class='admin' href="/delete/{{tasks.id}}">Delete</a><br><br><a class='admin' href="/update/{{tasks.id}}">Update</a>
+          </div>
+        {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #ff9c46;
+}
+input[type=text], input[type=title] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=title]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+.container{
+    margin: auto;
+    width: 50%;
+    padding-top: 10px;
+    margin-top: 20px;
+
+}
+input[type=submit] {
+    background-color: #7ca4b9;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+  
+  }
+  
+input[type=submit]:hover {
+    background-color: #6096B4;
+    box-shadow: 2px 2px 2px #463d35;
+    transition: box-shadow 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+  }
+label{
+    text-align: center;
+    margin-left: 47%;
+}

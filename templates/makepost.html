@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}<link rel="stylesheet" href="{{ url_for('static',filename='makepost.css') }}">{% endblock %}
+{% block title %}PostMaking{% endblock %}
+
+{% block body %}
+<div class="container">
+    <form action="/makepost" method="POST">
+        <label for="title">Title</label>
+        <input type="title" name="tcontent" id="tcontent" required>
+        <br>
+        <label for="text">Text</label>
+        <input type="text" name="content" id="content" required>
+        <br>
+        <input type="submit" value="Add">
+    </form>
+    
+</div>
+
+{% endblock %}
